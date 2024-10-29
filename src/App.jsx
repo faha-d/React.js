@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
 import Greet from "./components/Greeting";
+import ProductInfo from "./components/ProductInfo";
 const App = () => {
   return (
     <div className="App">
@@ -9,6 +10,7 @@ const App = () => {
       <Header />
       <Content />
       <Footer />
+      <ProductInfo/>
     </div>
   );
 };
