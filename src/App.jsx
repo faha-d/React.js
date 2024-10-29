@@ -3,6 +3,7 @@ import Content from "./components/Content";
 import Footer from "./components/Footer";
 import Greet from "./components/Greeting";
 import ProductInfo from "./components/ProductInfo";
+import UsersInfo from "./UsersInfo";
 const App = () => {
   return (
     <div className="App">
@@ -11,6 +12,7 @@ const App = () => {
       <Content />
       <Footer />
       <ProductInfo/>
+      <UsersInfo/>
     </div>
   );
 };
