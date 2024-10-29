@@ -1,6 +1,13 @@
+import Header from "./components/Header";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
 const App = () => {
-  return(
-    <h1>Hello World!</h1>
-  )
-}
-export default App
+  return (
+    <div className="App">
+      <Header />
+      <Content />
+      <Footer />
+    </div>
+  );
+};
+export default App;
