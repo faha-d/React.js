@@ -1,8 +1,12 @@
 const Greet = () => {
+  const myName = "Muhammad Fahad";
+  const message = "You Logged In on our website at";
+  const currentDate = new Date().toLocaleDateString();
+  const fullMessage = `${myName}, ${message} ${currentDate}`;
+  
   return (
     <section>
-      <h1> Hello World! </h1>
-      <p>Welcome to Learning JSX!</p>
+      <p>{fullMessage}</p>
     </section>
   );
 };
