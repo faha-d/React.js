@@ -1,0 +1,8 @@
+{
+    "name": "React Vite App",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-18",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {}
+    },
+    "postCreateCommand": "npm install"
+}
