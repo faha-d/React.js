@@ -1,10 +1,13 @@
 import Header from "./components/Header";
-import Content from "./components/Content";
+import Content, { Password } from "./components/Content";
 import Footer from "./components/Footer";
 import Bio from "./components/Bio";
 import ProductInfo from "./components/ProductInfo";
 import UsersInfo from "./components/UsersInfo";
 import Card from "./components/Card";
+import Weather from "./components/Weather";
+import UserStatus from "./components/UserStatus";
+import Greet from "./components/Greet";
 const App = () => {
   return (
     <div className="App">
@@ -27,6 +30,10 @@ const App = () => {
         <h1>This is Card 2</h1>
         <p>Card Information</p>
       </Card>
+      <Password isValid={false} />
+      <Weather temp={26} />
+      <UserStatus isLoggedIn={false} isAdmin={true}/>
+      <Greet time="Morning"/>
     </div>
   );
 };
