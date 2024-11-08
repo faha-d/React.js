@@ -1,0 +1,64 @@
+/* Container for all cards */
+.card {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: bisque;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+  margin: 20px;
+  text-align: center;
+}
+
+/* Individual card styling */
+.main-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for each card */
+.main-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
+.main-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Card content padding */
+.main-card h2,
+.main-card h3,
+.main-card p {
+  margin: 0;
+  padding: 8px 16px;
+}
+
+.main-card h2 {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.main-card h3 {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 400;
+}
+
+.main-card p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 600;
+  padding-bottom: 16px;
+}
