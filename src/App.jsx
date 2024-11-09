@@ -7,8 +7,8 @@
 // import Weather from "./components/Weather";
 // import UserStatus from "./components/UserStatus";
 // import Greet from "./components/Greet";
-import Cardlist from "./components/card/Card";
-
+// import Cardlist from "./components/card/Card";
+import Counter from "./components/counter/Counter";
 const App = () => {
   return (
     <>
@@ -29,7 +29,8 @@ const App = () => {
       <UserStatus isLoggedIn={false} isAdmin={true} />
       <Greet time="Morning" /> */}
 
-      <Cardlist />
+      {/* <Cardlist /> */}
+      <Counter/>
     </>
   );
 };
