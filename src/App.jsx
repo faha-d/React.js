@@ -8,7 +8,9 @@
 // import UserStatus from "./components/UserStatus";
 // import Greet from "./components/Greet";
 // import Cardlist from "./components/card/Card";
-import Counter from "./components/counter/Counter";
+// import Counter from "./components/counter/Counter";
+import Friends from "./components/friendsList/Friend";
+
 const App = () => {
   return (
     <>
@@ -30,7 +32,8 @@ const App = () => {
       <Greet time="Morning" /> */}
 
       {/* <Cardlist /> */}
-      <Counter/>
+      {/* <Counter/> */}
+      <Friends />
     </>
   );
 };
