@@ -9,7 +9,8 @@
 // import Greet from "./components/Greet";
 // import Cardlist from "./components/card/Card";
 // import Counter from "./components/counter/Counter";
-import Friends from "./components/friendsList/Friend";
+// import Friends from "./components/friendsList/Friend";
+import TodoList from "./components/todoList/TodoList";
 
 const App = () => {
   return (
@@ -33,7 +34,8 @@ const App = () => {
 
       {/* <Cardlist /> */}
       {/* <Counter/> */}
-      <Friends />
+      {/* <Friends /> */}
+      <TodoList />
     </>
   );
 };
