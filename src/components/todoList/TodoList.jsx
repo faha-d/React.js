@@ -1,34 +1,32 @@
 import { useState } from "react";
-
+import "./TodoList.css"
 const TodoList = () => {
-  const [todo, setTodo] = useState([]);
-  const [newTodo, setNewTodo] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (newTodo.trim() === "") return;
-    setTodo([...todo, newTodo]);
-    setNewTodo("");
-  };
   return (
-    <>
-      <h1>Todo List</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Enter New Task"
-          value={newTodo}
-          onChange={(e) => setNewTodo(e.target.value)}
-        />
-        <button type="submit">Add New Task</button>
-      </form>
+    <section className="todo-container">
 
-      <ul>
-        {todo.map((todo, index) => (
-          <li key={index}>{todo}</li>
-        ))}
-      </ul>
-    </>
+      <header>
+        <h1>Todo List</h1>
+        <p>Write and Manage your tasks efficiently and smartly</p>
+      </header>
+
+      <section className="form-container">
+        <form>
+          <div>
+            <input
+              type="text"
+              className="todo-input"
+              placeholder="Write your task..."
+            />
+          </div>
+
+          <div>
+            <button type="submit" className="todo-btn">
+              Add Task
+            </button>
+          </div>
+        </form>
+      </section>
+    </section>
   );
 };
 
