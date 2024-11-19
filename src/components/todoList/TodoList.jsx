@@ -10,7 +10,11 @@ const TodoList = () => {
   const handleAddTask = (e) => {
     e.preventDefault();
 
-    if (taskInput.trim() === "") return;
+    if (taskInput.trim() === "") {
+      let errorMsg = document.querySelector(".empty-inp");
+      errorMsg.classList.add("active");
+      return;
+    }
 
     const newTask = { id: uuidv4(), text: taskInput };
     setTasks([...tasks, newTask]);
@@ -19,6 +23,19 @@ const TodoList = () => {
 
   const handleRemoveTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
+  };
+
+  const handleInputChange = (e) => {
+    setTaskInput(e.target.value);
+    let errorMsg = document.querySelector(".empty-inp");
+    if (e.target.value.trim() !== "") {
+      errorMsg.classList.remove("active");
+    }
+  };
+
+  const handleRemoveAll = () => {
+    console.log("hello");
+    setTasks([]);
   };
 
   return (
@@ -36,14 +53,21 @@ const TodoList = () => {
               className="todo-input"
               placeholder="Write your task..."
               value={taskInput}
-              onChange={(e) => setTaskInput(e.target.value)}
+              onChange={handleInputChange}
             />
+            <p className="empty-inp">Please Enter Text!</p>
           </div>
 
-          <div>
+          <div className="func-btns">
             <button type="submit" className="todo-btn">
               Add Task
             </button>
+
+            {tasks.length > 0 && (
+              <button className="todo-btn red" onClick={handleRemoveAll}>
+                Remove All
+              </button>
+            )}
           </div>
         </form>
       </section>
