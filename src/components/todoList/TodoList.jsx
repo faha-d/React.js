@@ -34,7 +34,6 @@ const TodoList = () => {
   };
 
   const handleRemoveAll = () => {
-    console.log("hello");
     setTasks([]);
   };
 
